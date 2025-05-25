@@ -1,0 +1,98 @@
+# AI Stock Chart Assistant v2.0 - Environment Configuration
+# Copy this file to .env and fill in your actual API keys
+
+# =============================================================================
+# AI MODEL API KEYS (Required for AI features)
+# =============================================================================
+
+# OpenAI API Key (for GPT-4V)
+# Get from: https://platform.openai.com/api-keys
+OPENAI_API_KEY=sk-your-openai-key-here
+
+# Google Gemini API Key (for Gemini Vision)
+# Get from: https://aistudio.google.com/app/apikey
+GOOGLE_API_KEY=your-gemini-key-here
+
+# =============================================================================
+# AI MODEL CONFIGURATION
+# =============================================================================
+
+# OpenAI Model Selection
+OPENAI_MODEL=gpt-4-vision-preview
+
+# Gemini Model Selection
+GEMINI_MODEL=gemini-pro-vision
+
+# Enable/Disable AI Consensus (set to false to use basic analysis only)
+ENABLE_AI_CONSENSUS=true
+
+# =============================================================================
+# COST CONTROLS & LIMITS
+# =============================================================================
+
+# Maximum daily spending on AI API calls (in USD)
+MAX_DAILY_AI_COST=10.00
+
+# Maximum cost per single AI request (in USD)
+MAX_REQUEST_COST=0.50
+
+# Enable AI response caching (recommended)
+CACHE_AI_RESPONSES=true
+
+# AI cache time-to-live in seconds (24 hours = 86400)
+AI_CACHE_TTL=86400
+
+# =============================================================================
+# PERFORMANCE SETTINGS
+# =============================================================================
+
+# Maximum number of concurrent AI requests
+MAX_CONCURRENT_AI_REQUESTS=3
+
+# Request timeout in seconds
+AI_REQUEST_TIMEOUT=30
+
+# Enable request batching for multiple stocks
+ENABLE_AI_BATCHING=true
+
+# =============================================================================
+# LOGGING & MONITORING
+# =============================================================================
+
+# Log level (DEBUG, INFO, WARNING, ERROR)
+LOG_LEVEL=INFO
+
+# Enable AI usage monitoring
+MONITOR_AI_USAGE=true
+
+# Enable performance metrics
+ENABLE_METRICS=true
+
+# =============================================================================
+# OPTIONAL: EXTERNAL SERVICES
+# =============================================================================
+
+# Redis URL (for advanced caching, optional)
+# REDIS_URL=redis://localhost:6379
+
+# Database URL (for user data, optional)
+# DATABASE_URL=sqlite:///stock_assistant.db
+
+# Email settings (for alerts, optional)
+# SMTP_SERVER=smtp.gmail.com
+# SMTP_PORT=587
+# EMAIL_USER=your-email@gmail.com
+# EMAIL_PASSWORD=your-app-password
+
+# =============================================================================
+# DEVELOPMENT SETTINGS
+# =============================================================================
+
+# Enable debug mode
+DEBUG=false
+
+# Enable development features
+DEV_MODE=false
+
+# Skip API key validation (for testing)
+SKIP_API_VALIDATION=false 
