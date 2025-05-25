@@ -1,0 +1,185 @@
+{
+  "log_level": "INFO",
+  "enable_ai_consensus": false,
+  
+  "cache": {
+    "memory_cache_size": 1000,
+    "disk_cache_ttl": 3600,
+    "image_cache_ttl": 1800,
+    "model_response_ttl": 7200,
+    "cleanup_interval": 300,
+    "max_disk_size_mb": 500
+  },
+  
+  "performance": {
+    "max_workers": 4,
+    "image_compression_quality": 85,
+    "max_image_size": [1920, 1080],
+    "batch_size": 10,
+    "memory_limit_mb": 1024,
+    "enable_parallel_processing": true
+  },
+  
+  "yahoo_finance": {
+    "rate_limit_delay": 1.0,
+    "max_retries": 3,
+    "timeout": 30,
+    "cache_ttl": 300,
+    "enable_news": true,
+    "max_news_items": 10
+  },
+  
+  "ai_models": {
+    "openai_model": "gpt-4-vision-preview",
+    "google_model": "gemini-pro-vision",
+    "fallback_model": "gpt-3.5-turbo",
+    "max_tokens": 1000,
+    "temperature": 0.1,
+    "timeout": 60,
+    "max_retries": 2,
+    "cost_tracking": true,
+    "enable_fallback": true
+  },
+  
+  "pattern_detection": {
+    "min_confidence": 0.6,
+    "lookback_periods": [20, 50, 100],
+    "smoothing_window": 3,
+    "enable_custom_patterns": true,
+    "pattern_types": [
+      "head_and_shoulders",
+      "inverse_head_and_shoulders",
+      "double_top",
+      "double_bottom",
+      "triangle_ascending",
+      "triangle_descending",
+      "triangle_symmetrical",
+      "flag_bullish",
+      "flag_bearish",
+      "wedge_rising",
+      "wedge_falling",
+      "channel_ascending",
+      "channel_descending"
+    ]
+  },
+  
+  "trend_analysis": {
+    "short_term_window": 20,
+    "medium_term_window": 50,
+    "long_term_window": 200,
+    "strength_threshold": 0.7,
+    "enable_multi_timeframe": true,
+    "trend_indicators": [
+      "sma",
+      "ema",
+      "linear_regression",
+      "adx"
+    ]
+  },
+  
+  "ml_models": {
+    "model_dir": "models",
+    "feature_windows": [5, 10, 20, 50],
+    "technical_indicators": true,
+    "retrain_threshold": 0.1,
+    "cross_validation_folds": 5,
+    "test_size": 0.2,
+    "random_state": 42,
+    "enable_feature_selection": true,
+    "max_features": 50
+  },
+  
+  "dashboard": {
+    "page_title": "AI Stock Chart Assistant v2.0",
+    "page_icon": "📈",
+    "layout": "wide",
+    "theme": "dark",
+    "chart_height": 600,
+    "real_time_update_interval": 30,
+    "cache_refresh_interval": 300,
+    "max_patterns_display": 10,
+    "max_news_items": 5,
+    "confidence_threshold": 0.7,
+    "enable_auto_refresh": false
+  },
+  
+  "technical_indicators": {
+    "rsi_period": 14,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal": 9,
+    "bb_period": 20,
+    "bb_std": 2,
+    "stoch_k": 14,
+    "stoch_d": 3,
+    "williams_r_period": 14,
+    "atr_period": 14,
+    "sma_periods": [10, 20, 50, 200],
+    "ema_periods": [12, 26, 50]
+  },
+  
+  "risk_management": {
+    "max_position_size": 0.1,
+    "stop_loss_percent": 0.05,
+    "take_profit_percent": 0.15,
+    "max_drawdown": 0.2,
+    "risk_free_rate": 0.02,
+    "enable_position_sizing": true
+  },
+  
+  "portfolio": {
+    "initial_capital": 100000,
+    "commission": 0.001,
+    "slippage": 0.0005,
+    "enable_tracking": false,
+    "rebalance_frequency": "monthly",
+    "max_positions": 20
+  },
+  
+  "alerts": {
+    "enable_email": false,
+    "enable_webhook": false,
+    "price_change_threshold": 0.05,
+    "volume_spike_threshold": 2.0,
+    "pattern_confidence_threshold": 0.8,
+    "trend_change_threshold": 0.7
+  },
+  
+  "export": {
+    "default_format": "json",
+    "include_metadata": true,
+    "compress_exports": false,
+    "max_export_size_mb": 100
+  },
+  
+  "api_keys": {
+    "openai_api_key": "",
+    "google_api_key": "",
+    "alpha_vantage_key": "",
+    "finnhub_key": "",
+    "polygon_key": ""
+  },
+  
+  "data_sources": {
+    "primary": "yahoo_finance",
+    "backup": "alpha_vantage",
+    "news_source": "yahoo_finance",
+    "enable_multiple_sources": false,
+    "data_validation": true
+  },
+  
+  "security": {
+    "enable_rate_limiting": true,
+    "max_requests_per_minute": 60,
+    "enable_api_key_rotation": false,
+    "log_api_usage": true
+  },
+  
+  "development": {
+    "debug_mode": false,
+    "enable_profiling": false,
+    "save_debug_images": false,
+    "verbose_logging": false,
+    "test_mode": false
+  }
+} 
