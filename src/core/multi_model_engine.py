@@ -112,15 +112,19 @@ class MultiModelEngine:
             # Gemini
             if self.config.get("gemini_api_key"):
                 genai.configure(api_key=self.config["gemini_api_key"])
-                self.gemini_model = genai.GenerativeModel('gemini-pro-vision')
+                self.gemini_model = genai.GenerativeModel('gemini-1.5-flash')  # Updated model
             
             # OpenAI GPT-4V
             if self.config.get("openai_api_key"):
-                openai.api_key = self.config["openai_api_key"]
                 self.openai_client = openai.OpenAI(api_key=self.config["openai_api_key"])
             
             # Token encoder for cost calculation
-            self.token_encoder = tiktoken.get_encoding("cl100k_base")
+            try:
+                self.token_encoder = tiktoken.get_encoding("cl100k_base")
+            except Exception:
+                # Fallback if tiktoken is not available
+                self.token_encoder = None
+                self.logger.warning("tiktoken not available, token counting disabled")
             
         except Exception as e:
             self.logger.error(f"Failed to initialize API clients: {e}")
