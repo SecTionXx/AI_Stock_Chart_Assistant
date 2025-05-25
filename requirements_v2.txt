@@ -1,0 +1,78 @@
+# AI Stock Chart Assistant v2.0 Requirements
+
+# Core Dependencies (existing)
+customtkinter>=5.2.0
+google-generativeai>=0.3.0
+Pillow>=10.0.0
+opencv-python>=4.8.0
+tenacity>=8.2.0
+structlog>=23.1.0
+python-dotenv>=1.0.0
+reportlab>=4.0.0
+matplotlib>=3.7.0
+pandas>=2.0.0
+
+# New v2.0 Dependencies
+
+# Multi-Model AI Integration
+openai>=1.3.0                    # GPT-4V integration
+anthropic>=0.8.0                 # Claude integration for consensus
+tiktoken>=0.5.0                  # Token counting for cost optimization
+
+# Live Data Integration
+yfinance>=0.2.18                 # Yahoo Finance API
+requests>=2.31.0                 # HTTP requests for APIs
+beautifulsoup4>=4.12.0           # Web scraping for news
+feedparser>=6.0.10               # RSS feed parsing
+python-dateutil>=2.8.2          # Date parsing utilities
+
+# Caching and Performance
+redis>=5.0.0                     # Redis for caching (optional local)
+diskcache>=5.6.3                 # Local disk caching alternative
+joblib>=1.3.0                    # Parallel processing
+psutil>=5.9.0                    # System monitoring
+
+# Machine Learning
+scikit-learn>=1.3.0              # ML algorithms for pattern recognition
+numpy>=1.24.0                    # Numerical computing
+scipy>=1.11.0                    # Scientific computing
+tensorflow>=2.13.0               # Deep learning (optional)
+torch>=2.0.0                     # PyTorch for custom models
+
+# Data Processing
+openpyxl>=3.1.0                  # Excel export
+xlsxwriter>=3.1.0                # Enhanced Excel features
+python-docx>=0.8.11              # Word document export
+jinja2>=3.1.0                    # Template engine for reports
+
+# API and Web Integration
+fastapi>=0.104.0                 # Web API framework (future)
+uvicorn>=0.24.0                  # ASGI server
+websockets>=12.0                 # Real-time data streaming
+aiohttp>=3.9.0                   # Async HTTP client
+
+# Development and Testing
+pytest>=7.4.0                    # Testing framework
+pytest-asyncio>=0.21.0           # Async testing
+pytest-cov>=4.1.0                # Coverage reporting
+black>=23.9.0                    # Code formatting
+flake8>=6.1.0                    # Linting
+mypy>=1.6.0                      # Type checking
+
+# Monitoring and Logging
+prometheus-client>=0.19.0        # Metrics collection
+sentry-sdk>=1.38.0               # Error tracking
+rich>=13.6.0                     # Enhanced console output
+
+# Security
+cryptography>=41.0.0             # Encryption for API keys
+keyring>=24.3.0                  # Secure credential storage
+
+# Optional GPU Acceleration
+# cupy-cuda11x>=12.0.0           # GPU acceleration (CUDA 11.x)
+# cupy-cuda12x>=12.0.0           # GPU acceleration (CUDA 12.x)
+
+# Version constraints for stability
+urllib3>=1.26.0,<3.0.0
+certifi>=2023.7.22
+charset-normalizer>=3.3.0 
